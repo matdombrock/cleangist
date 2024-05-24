@@ -3,6 +3,11 @@ console.log('Hello from index.js');
 // Get all anchor links
 const sections = document.querySelectorAll('a');
 
+// Fix scroll issues in small windows
+window.scrollTo({
+    top: 0,
+    behavior: 'instant'
+});
 // Loop through each section and add a click event listener
 // Scroll up after visiting anchor link
 // XXX - Kinda bad code
