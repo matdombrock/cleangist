@@ -2,6 +2,13 @@
 
 This is a fairly simple Express server which grabs raw gist data from GitHub (Markdown format) and converts it to plain (but nice looking) HTML without the extra GH stuff. 
 
+```
+<server_url>/smart?user=<user_name>&gistId=<gist_id>&gistName=<gist_name>
+```
+
+**Note: The `gistName` value should not contain the `.md` file extension**
+
+## Usage
 Take a gist URL like this:
 ```
 https://gist.github.com/JaredVogt/07462028c47477b8a001e9faf7f7e251#file-propatch-md
@@ -18,6 +25,12 @@ Send it to the `smart` endpoint:
 ```
 
 **Note: It would be easy to restrict the user name to prevent potential abuse.**
+
+## Raw URLs
+You can also supply a raw Gist URL to the `/raw` endpoint:
+```
+<server_url>/raw?gistURL=<full_gist_url>
+```
 
 ## How it works:
 
